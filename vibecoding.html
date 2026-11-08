@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qué es el vibe coding, su ciclo de trabajo, ejemplos de prompts, ventajas, riesgos y buenas prácticas.">
+    <title>Vibecoding | ¿Qué es el vibecoding?</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container header-layout">
+            <a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span> VIBECODING<span class="brand-subtitle">IA en el desarrollo de software</span></a>
+            <nav aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="vibecoding.html" class="activo" aria-current="page">Vibecoding</a></li>
+                    <li><a href="IAsoftware.html">IA en el Desarrollo de Software</a></li>
+                    <li><a href="ingenieria-inversa.html">Ingeniería Inversa</a></li>
+                    <li><a href="quesigue.html">¿Qué sigue?</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido" class="container" tabindex="-1">
+        <section class="page-intro" aria-labelledby="gallery-title"><p class="eyebrow">¿Usamos la IA como un asistente, o estamos dependiendo de ella?</p><h1 id="gallery-title">Vibe Coding: programar con la intención.</h1><p class="lead">Describes lo que quieres en lenguaje natural, la IA escribe el código y tú ajustas conversando. Suena a magia, pero tiene reglas, límites y riesgos.</p></section>
+        <section class="section" aria-labelledby="t-que">
+      <div class="container split">
+        <div>
+          <h2 id="t-que">¿Qué es el vibe coding?</h2>
+          <p>Es un estilo de desarrollo en el que la persona se concentra en la <strong>idea y el resultado</strong>, y delega en un modelo de IA la mayor parte de la escritura del código. En lugar de pensar en sintaxis, piensas en «quiero una pantalla de login con modo oscuro» y refinas con mensajes.</p>
+          <p>El término lo popularizó <strong>Andrej Karpathy</strong> a inicios de 2025 para describir ese modo de trabajar «dejándose llevar» por lo que produce el asistente, y en poco tiempo se volvió una palabra de uso general, hasta ser reconocida como palabra del año por el diccionario Collins.</p>
+          <div class="callout">
+            <strong>En una frase</strong>
+            <p>Vibe coding es conversar con una IA hasta que el programa se comporta como imaginabas, aceptando que no siempre leerás cada línea.</p>
+          </div>
+        </div>
+        <figure class="img-slot" style="--ratio:4/3">
+          <img src="IMG/vibe-coding-portada.jpg" alt="Persona programando con ayuda de un asistente de IA mediante conversación" width="800" height="600">
+        </figure>
+      </div>
+    </section>
+
+       <section class="section alt" aria-labelledby="t-ciclo">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">El ciclo</span>
+          <h2 id="t-ciclo">Cuatro pasos que se repiten</h2>
+          <p>Casi todo proyecto de vibe coding gira en el mismo bucle. La diferencia entre un buen resultado y un desastre está en qué tan seguido pruebas y revisas.</p>
+        </div>
+        <div class="loop">
+          <div><h3>Describe</h3><p>Explicas qué quieres, para quién y con qué límites.</p></div>
+          <div><h3>Genera</h3><p>La IA propone archivos, funciones y estructura.</p></div>
+          <div><h3>Prueba</h3><p>Ejecutas, miras el resultado y detectas lo que falla.</p></div>
+          <div><h3>Ajusta</h3><p>Pides cambios precisos y vuelves al paso 2.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="t-prompt">
+      <div class="container split">
+        <div>
+          <h2 id="t-prompt">Un prompt que funciona</h2>
+          <p>Un buen prompt tiene <strong>contexto</strong>, <strong>objetivo</strong>, <strong>restricciones</strong> y <strong>criterio de aceptación</strong>. Compara: «hazme una web de tareas» contra el ejemplo de al lado. El segundo reduce las suposiciones de la IA y te ahorra rondas de corrección.</p>
+          <ul>
+            <li>Di qué tecnologías sí y cuáles no.</li>
+            <li>Pide cambios pequeños, no «reescribe todo».</li>
+            <li>Pide que explique lo que hizo antes de continuar.</li>
+          </ul>
+        </div>
+        <pre class="code-block" aria-label="Ejemplo de prompt"># Contexto
+Soy estudiante. Necesito una app web de tareas.
+
+# Objetivo
+Agregar, completar y borrar tareas.
+
+# Restricciones
+Solo HTML, CSS y JavaScript puros.
+Sin librerías. Que funcione en celular.
+
+# Aceptación
+Las tareas persisten al recargar la página.
+Explícame cada archivo antes de escribirlo.</pre>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="t-pros">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Balance</span>
+          <h2 id="t-pros">Ventajas y riesgos</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Aspecto</th><th scope="col">A favor</th><th scope="col">En contra</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Velocidad</th><td>Prototipos funcionales en minutos u horas.</td><td>La velocidad inicial puede ocultar errores que aparecen después.</td></tr>
+              <tr><th scope="row">Acceso</th><td>Personas sin experiencia pueden crear herramientas propias.</td><td>Quien no entiende el código no sabe cuándo es inseguro.</td></tr>
+              <tr><th scope="row">Calidad</th><td>La IA aplica patrones conocidos y buenas prácticas habituales.</td><td>También puede inventar funciones o dependencias que no existen.</td></tr>
+              <tr><th scope="row">Mantenimiento</th><td>Es fácil pedir cambios y refactorizaciones.</td><td>Sin pruebas ni documentación, el proyecto se vuelve una caja negra.</td></tr>
+              <tr><th scope="row">Seguridad</th><td>La IA puede señalar vulnerabilidades si se lo pides.</td><td>Puede dejar claves expuestas o validar mal los datos de entrada.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="t-bp">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">¡No dejes que la IA haga todo!</span>
+          <h2 id="t-bp">Buenas prácticas para no perder el control</h2>
+        </div>
+        <div class="card-list">
+          <article class="card"><span class="icon" aria-hidden="true">🧪</span><h3>Prueba siempre</h3><p>Ejecuta lo que genera la IA. Si no lo probaste, no funciona todavía.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">🔍</span><h3>Revisa lo crítico</h3><p>Lee con calma autenticación, pagos, permisos y manejo de datos.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">🌿</span><h3>Usa Git</h3><p>Haz commits pequeños. Si la IA rompe algo, vuelves atrás sin drama.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">📝</span><h3>Documenta</h3><p>Pídele a la IA un README y comentarios. Tu yo del futuro lo agradecerá.</p></article>
+        </div>
+        <div class="callout warn">
+          <strong>Ojo con los secretos</strong>
+          <p>Nunca pegues contraseñas, claves de API ni datos personales de terceros en un prompt. Lo que escribes puede viajar a los servidores del proveedor del modelo.</p>
+        </div>
+      </div>
+    </section>
+
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-layout"><p>Vibecoding · Desarrollo de Software usando IA</p><p>Santiago Laserna · Desarrollo de Software V</p><a href="#contenido">Regresar al encabezado ↑</a></div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cómo ha evolucionado la IA en el desarrollo de software y qué hace en cada fase del ciclo de vida.">
+    <title>Vibecoding | IA en el desarrollo de software</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container header-layout">
+            <a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span> VIBECODING<span class="brand-subtitle">IA en el desarrollo de software</span></a>
+            <nav aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="vibecoding.html">Vibecoding</a></li>
+                    <li><a href="IAsoftware.html" class="activo" aria-current="page">IA en el Desarrollo de Software</a></li>
+                    <li><a href="ingenieria-inversa.html">Ingeniería Inversa</a></li>
+                    <li><a href="quesigue.html">¿Qué sigue?</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido" class="container" tabindex="-1">
+        <section class="page-intro" aria-labelledby="gallery-title"><p class="eyebrow">¿Usamos la IA como un asistente, o estamos dependiendo de ella?</p><h1 id="gallery-title">Inteligencia Artificial aplicada al desarrollo de software</h1><p class="lead">De completar una línea de código a ejecutar tareas completas por su cuenta: así evolucionó la IA dentro del trabajo de los desarrolladores.</p></section>
+        <section class="section" aria-labelledby="t-evo">
+      <div class="container split">
+        <div>
+          <h2 id="t-evo">Cuatro oleadas en pocos años</h2>
+          <ol class="timeline">
+            <li><time>2021</time><h3>Autocompletado inteligente</h3><p>Herramientas como GitHub Copilot sugieren la siguiente línea o función mientras escribes.</p></li>
+            <li><time>2022–2023</time><h3>Chat para programadores</h3><p>Aparecen los asistentes conversacionales: pegas un error y recibes explicación y arreglo.</p></li>
+            <li><time>2024</time><h3>Estándares para conectar herramientas</h3><p>Nace el Model Context Protocol (MCP), una forma común de que un modelo use herramientas externas.</p></li>
+            <li><time>2025–2026</time><h3>Agentes de código</h3><p>Agentes como Claude Code o Codex leen proyectos enteros, ejecutan comandos, corrigen y repiten hasta cumplir el objetivo.</p></li>
+          </ol>
+        </div>
+        <figure class="img-slot" style="--ratio:4/5">
+          <img src="IMG/ia-evolucion.jpg" alt="Agente de IA ejecutando tareas de programación en una terminal" width="640" height="800">
+        </figure>
+      </div>
+    </section>
+        <section class="section" aria-labelledby="t-fases">
+      <div class="container split">
+        <div>
+          <h2 id="t-fases">Qué hace la IA en cada fase</h2>
+          <div class="loop">
+            <div><h3>Planificar</h3><p>La IA ayuda a convertir ideas vagas en requisitos claros, historias de usuario y listas de tareas. También puede detectar contradicciones entre requisitos y estimar el alcance de forma preliminar.</p></div>
+            <div><h3>Diseñar</h3><p>Propone arquitecturas, esquemas de base de datos y bocetos de interfaz, y explica ventajas y desventajas de cada opción. Es útil para explorar alternativas rápido.</p></div>
+            <div><h3>Codificar</h3><p>Genera funciones, componentes y pruebas, traduce entre lenguajes y refactoriza código antiguo. Los agentes pueden además navegar el repositorio, ejecutar el programa y corregir sus propios errores.</p></div>
+            <div><h3>Probar</h3><p>Crea casos de prueba, propone casos límite que nadie pensó y ayuda a reproducir errores a partir de un reporte. También sirve para revisar código y señalar posibles vulnerabilidades.</p></div>
+            <div><h3>Desplegar y mantener</h3><p>Escribe scripts de despliegue, documenta, analiza registros y puede migrar sistemas heredados cuando existe una forma de comprobar automáticamente que el resultado coincide con el original.</p></div>
+
+          </div>
+        </div>
+        <figure class="img-slot" style="--ratio:4/3">
+          <img src="IMG/vibe-coding-portada.jpg" alt="Persona programando con ayuda de un asistente de IA mediante conversación" width="800" height="600">
+        </figure>
+      </div>
+    </section>
+
+       <section class="section alt" aria-labelledby="t-rol">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">Humanos</span>
+          <h2 id="t-rol">Cómo cambia el rol del programador</h2>
+        </div>
+        <div class="card-list">
+          <article class="card"><span class="icon" aria-hidden="true">🧭</span><h3>De escribir a especificar</h3><p>El valor se mueve hacia describir bien el problema y los criterios de éxito.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">🛡️</span><h3>De programar a revisar</h3><p>Leer, cuestionar y verificar código ajeno (o generado) se vuelve una habilidad central.</p></article>
+          <article class="card"><span class="icon" aria-hidden="true">🏗️</span><h3>De tareas a sistemas</h3><p>Con la IA haciendo lo repetitivo, importa más la arquitectura y entender el negocio.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="t-limites">
+      <div class="container split">
+        <div>
+          <h2 id="t-limites">Límites que conviene conocer</h2>
+          <ul>
+            <li><strong>Alucinaciones:</strong> el modelo puede inventar funciones, librerías o datos con total seguridad.</li>
+            <li><strong>Privacidad:</strong> aunque una herramienta analice archivos en tu equipo, los resultados suelen pasar por el agente y llegar al proveedor del modelo.</li>
+            <li><strong>Propiedad intelectual:</strong> el código escrito casi por completo por una IA puede no estar protegido por derechos de autor, y puede parecerse a código con licencia.</li>
+            <li><strong>Dependencia:</strong> si aceptas todo sin entenderlo, pierdes capacidad de corregirlo cuando falle.</li>
+            <li><strong>Reglas de uso:</strong> los proveedores de IA establecen términos de servicio que limitan ciertos usos.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-layout"><p>Vibecoding · Desarrollo de Software usando IA</p><p>Santiago Laserna · Desarrollo de Software V</p><a href="#contenido">Regresar al encabezado ↑</a></div>
+    </footer>
+</body>
+</html>

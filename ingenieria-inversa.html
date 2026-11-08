@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qué es Reverse Engineer Anything (REA), qué se ha construido con ingeniería inversa asistida por IA y qué tan legal es.">
+    <title>Vibecoding | Ingeniería inversa con IA</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container header-layout">
+            <a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">&lt;/&gt;</span> VIBECODING<span class="brand-subtitle">IA en el desarrollo de software</span></a>
+            <nav aria-label="Navegación principal">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="vibecoding.html">Vibecoding</a></li>
+                    <li><a href="IAsoftware.html">IA en el Desarrollo de Software</a></li>
+                    <li><a href="ingenieria-inversa.html" class="activo" aria-current="page">Ingeniería Inversa</a></li>
+                    <li><a href="quesigue.html">¿Qué sigue?</a></li>
+                    <li><a href="autor.html">Autor</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="contenido" class="container" tabindex="-1">
+        <section class="page-intro" aria-labelledby="gallery-title"><p class="eyebrow">Actualidad · octubre–noviembre de 2026</p><h1 id="gallery-title">Ingeniería inversa con IA: el caso REA</h1><p class="lead">Un plugin para agentes de IA, miles de proyectos que replican software ajeno y una pregunta que divide a la industria: ¿estamos ante el fin del software cerrado o ante una exageración viral?</p></section>
+        <section class="section" aria-labelledby="t-ie">
+      <div class="container split">
+        <div>
+          <h2 id="t-ie">Primero, ¿Qué es la ingeniería inversa?</h2>
+          <p>Es el proceso de estudiar un producto terminado, sea un programa, un dispositivo o un protocolo, para entender cómo funciona sin tener sus planos originales. En software suele significar analizar el comportamiento de un programa o <strong>decompilar</strong> su binario con herramientas como Ghidra, IDA o Hopper.</p>
+          <p>No es nueva ni es «mala» por definición. Se usa para:</p>
+          <ul>
+            <li><strong>Interoperabilidad:</strong> hacer que dos sistemas distintos se entiendan.</li>
+            <li><strong>Preservación:</strong> mantener vivos juegos y programas abandonados.</li>
+            <li><strong>Seguridad:</strong> encontrar vulnerabilidades antes que los atacantes.</li>
+            <li><strong>Reparación:</strong> revivir dispositivos cuyo fabricante dejó de dar soporte.</li>
+          </ul>
+          <p>Lo nuevo es la <em>velocidad</em> y el <em>costo</em>: lo que antes tomaba años de trabajo voluntario hoy puede avanzar en semanas con agentes que trabajan sin parar.</p>
+        </div>
+        <figure class="img-slot" style="--ratio:4/3">
+          <img src="IMG/ing-inversa-concepto.jpg" alt="Herramienta de decompilación mostrando código de un programa analizado" width="800" height="600">
+          <figcaption>Decompilar: leer un programa sin tener su código fuente</figcaption>
+        </figure>
+      </div>
+    </section>
+
+        <section class="section alt" aria-labelledby="t-rea">
+      <div class="container">
+        <div class="section-heading">
+          <span class="eyebrow">El repositorio</span>
+          <h2 id="t-rea">Reverse Engineer Anything (REA)</h2>
+          <p>REA es un proyecto de código abierto que se instala como complemento de un agente de IA. Según la documentación y las guías publicadas, combina un <strong>servidor MCP</strong> con un conjunto de instrucciones («skill») para que el agente pueda investigar una aplicación con herramientas reales.</p>
+        </div>
+        <div class="card-list">
+          <article class="card"><span class="card-number">Qué es</span><h3>Servidor MCP + skill</h3><p>Conecta agentes como Claude Code o Codex con herramientas de análisis. En la versión 6.7.0 se reportaron 207 herramientas disponibles.</p></article>
+          <article class="card"><span class="card-number">Con qué trabaja</span><h3>Apps JavaScript y Electron</h3><p>Funcionan de entrada. Para ejecutables nativos hace falta instalar aparte Ghidra, IDA o Hopper, y para APK de Android, un JDK.</p></article>
+          <article class="card"><span class="card-number">Cómo piensa</span><h3>Visto, inferido, desconocido</h3><p>Su método separa lo que el agente comprobó en los archivos, lo que dedujo y lo que no logró averiguar, para no tratar suposiciones como hechos.</p></article>
+        </div>
+        <div class="callout warn">
+          <strong>Lo que REA no es</strong>
+          <p>Su propio README aclara que no promete recuperar el código fuente original ni clonar una aplicación entera de forma automática. Entrega <em>evidencia</em>; construir la nueva versión sigue siendo trabajo del agente y de la persona. Muchos titulares prometían más de lo que la herramienta dice hacer.</p>
+        </div>
+        <div class="callout">
+          <strong>Uso previsto</strong>
+          <p>Según la descripción del proyecto, está pensado para investigación lícita, educación, interoperabilidad, preservación de software y análisis de programas que posees o estás autorizado a examinar.</p>
+        </div>
+      </div>
+    </section>
+
+       <section class="section" aria-labelledby="t-viral">
+      <div class="container split">
+        <div>
+          <h2 id="t-viral">¿Por qué se volvió viral?</h2>
+          <p>El repositorio trepó al primer lugar de las tendencias de GitHub y superó las 340 mil estrellas en cuestión de días. Influyentes de la tecnología lo resumieron con frases como «el software se acabó», y el CEO de Replit fue citado diciendo que casi todo el software terminará siendo de código abierto.</p>
+          <p>La cobertura internacional lo comparó con lo que hicieron las redes de intercambio de MP3 a finales de los 90: una tecnología que rompe la escasez de algo que parecía protegido. Medios como 404 Media hablaron de un «nuevo Lejano Oeste» de la IA, con software descompilado, clonado y modificado circulando sin control.</p>
+          <p>También hay una lectura esperanzadora: comunidades de reparación y preservación llevan años devolviendo vida a dispositivos «muertos», y estas herramientas les dan una ayuda enorme.</p>
+        </div>
+        <figure class="img-slot" style="--ratio:16/10">
+          <img src="IMG/rea-viral.jpg" alt="Gráfico del crecimiento de estrellas del repositorio REA en GitHub" width="800" height="500">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section alt" aria-labelledby="t-casos">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Casos reales</p>
+          <h2 id="t-casos">Lo que ya se ha construido</h2>
+        </div>
+        <div class="card-list">
+          <article class="card"><span class="card-number">Caso 1</span><h3>Call of Duty + Minecraft + Skate 3</h3><p>A mediados de septiembre, un desarrollador publicó IW4L, un motor para Call of Duty: Modern Warfare 2 (2009) escrito desde cero en Rust, tras inspeccionar los archivos del juego con Ghidra.<span class="texto-extra" hidden> Dos semanas después, otro modder lo usó para combinar el juego con la física de Skate 3 y un mundo estilo Minecraft: caminas con armas de Call of Duty y con una tecla saltas a un skate. El mashup necesita que el jugador tenga su propia copia de los juegos originales.</span></p><button type="button" class="boton-mas" aria-expanded="false">Mostrar más</button></article>
+          <article class="card"><span class="card-number">Caso 2</span><h3>Clones de Photoshop, Illustrator y Premiere</h3><p>Una suite abierta llamada ArtCraft (PhotoCraft, VectorCraft y FilmCraft) se hizo famosa por su pretensión de ser una reimplementación «clean room» basada en especificaciones públicas y comportamiento observado.<span class="texto-extra" hidden> Su autor dijo públicamente que no usó REA para proteger esa defensa. El proyecto afirma que 134 de 135 archivos PSD de prueba se abren y guardan idénticos.</span></p><button type="button" class="boton-mas" aria-expanded="false">Mostrar más</button></article>
+          <article class="card"><span class="card-number">Caso 3</span><h3>Reconstruir un juego desde su ejecutable</h3><p>Varios desarrolladores contaron cómo agentes de IA reconstruyeron gran parte de Call of Duty: Modern Warfare 2 (2009) en C++.<span class="texto-extra" hidden> Otros proyectos de decompilación «matching», que busca código que compile idéntico al binario original, alcanzaron hitos en GoldenEye 007, Super Smash Bros. Melee y Halo: Combat Evolved. El truco: esa comparación byte a byte le da al agente una prueba objetiva de acierto que puede repetir sin supervisión.</span></p><button type="button" class="boton-mas" aria-expanded="false">Mostrar más</button></article>
+          <article class="card"><span class="card-number">Caso 4</span><h3>Plugins de producción musical</h3><p>Empresas populares como Waves, Fabfilter, NeuralDSP, GGD y muchas otras han sido clonadas por la comunidad, recreando sus mejores plugins sin tener una sola línea del código fuente original.</p></article>
+        </div>
+
+        <div class="gallery">
+          <figure class="img-slot" style="--ratio:4/3">
+            <img src="IMG/caso-mashup.jpg" alt="Captura del mashup de Call of Duty, Skate 3 y Minecraft" width="640" height="480">
+            <figcaption>Mashup de tres juegos</figcaption>
+          </figure>
+          <figure class="img-slot" style="--ratio:4/3">
+            <img src="IMG/caso-artcraft.jpg" alt="Interfaz de Photoshop, clon de código abierto de un editor de imágenes" width="640" height="480">
+            <figcaption>Photoshop</figcaption>
+          </figure>
+          <figure class="img-slot" style="--ratio:4/3">
+            <img src="IMG/caso-plugins.jpg" alt="Captura de Waves" width="640" height="480">
+            <figcaption>Plugins de producción musical</figcaption>
+          </figure>
+        </div>
+
+        <div class="callout danger">
+          <strong>Dos precauciones prácticas</strong>
+          <p>Hay mayor riesgo cuando se clona un producto de un competidor directo, cuando se reutilizan recursos gráficos o de audio y cuando hay contratos o términos de servicio que prohíben analizar el software. Los términos de algunos proveedores de IA, por ejemplo, prohíben hacer ingeniería inversa a sus propios servicios, y se ha informado que algunos asistentes han empezado a rechazar peticiones de clonar videojuegos identificables.</p>
+        </div>
+      </div>
+    </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-layout"><p>Vibecoding · Desarrollo de Software usando IA</p><p>Santiago Laserna · Desarrollo de Software V</p><a href="#contenido">Regresar al encabezado ↑</a></div>
+    </footer>
+</body>
+</html>
