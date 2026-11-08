@@ -1,0 +1,573 @@
+/* =========================================================
+   estilos.css — Vibecoding (Desarrollo de Software V)
+   Orden del archivo:
+   1 Base · 2 Estructura (container, secciones) · 3 Encabezado y menú
+   4 Portada (hero) · 5 Botones · 6 Tarjetas y galería
+   7 Componentes de contenido · 8 Imágenes · 9 Pie de página · 10 Pantallas grandes
+   ========================================================= */
+
+/* ---------- 1. Base ---------- */
+html {
+    color-scheme: dark;
+}
+html, body, header, nav, main, section, article, footer,
+div, span, h1, h2, h3, p, a, ul, li, figure, figcaption, img, iframe {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: radial-gradient(ellipse at 85% 10%, #30231b 0, transparent 40%), #101111;
+    color: #f5f0e8;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.7;
+}
+h1, h2, h3, p, figure {
+    margin: 0;
+}
+h1, h2, h3 {
+    line-height: 1.15;
+}
+h1 {
+    font-size: clamp(2.5rem, 5.2vw, 4.8rem);
+    font-weight: 750;
+    letter-spacing: -0.045em;
+}
+h2 {
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    letter-spacing: -0.025em;
+}
+h3 {
+    font-size: 1.4rem;
+}
+p {
+    color: #b9b7af;
+}
+p + p,
+p + ul {
+    margin-top: 1rem;
+}
+ul, ol {
+    color: #b9b7af;
+}
+li + li {
+    margin-top: 0.4rem;
+}
+strong {
+    color: #f5f0e8;
+}
+a {
+    color: #ffad61;
+    text-underline-offset: 0.25em;
+}
+a:hover {
+    color: #f5f0e8;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+a:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #ffad61;
+    outline-offset: 5px;
+}
+code {
+    padding: 0.1em 0.4em;
+    border: 1px solid #3e403b;
+    border-radius: 0.3rem;
+    background: #1b1d1c;
+    font-size: 0.9em;
+}
+
+/* ---------- 2. Estructura ---------- */
+.container {
+    width: min(74rem, calc(100% - 2rem));
+    margin-inline: auto;
+}
+/* Un .container dentro de otro ya no se encoge dos veces */
+.container .container {
+    width: 100%;
+}
+.skip-link {
+    position: absolute;
+    top: 0.5em;
+    left: 1rem;
+    transform: translateY(-180%);
+    background: #f5f0e8;
+    color: #101111;
+    padding: 0.75rem;
+    z-index: 10;
+}
+.skip-link:focus {
+    transform: translateY(0);
+}
+.section {
+    padding-block: clamp(2.5rem, 6vw, 5rem);
+}
+/* Sección con fondo destacado (clase "alt") */
+.section.alt {
+    margin-block: 1rem;
+    padding-inline: clamp(1rem, 3vw, 2.5rem);
+    border: 1px solid #3e403b;
+    border-radius: 1.25rem;
+    background: #161817;
+}
+.section-heading {
+    max-width: 42rem;
+    margin-bottom: 2rem;
+}
+.eyebrow {
+    display: block;
+    color: #ffad61;
+    font-size: 0.80rem;
+    font-weight: 800;
+    letter-spacing: 0.14rem;
+    margin-bottom: 1rem;
+}
+.lead {
+    font-size: 1.1rem;
+    max-width: 42rem;
+    margin-top: 1.5rem;
+}
+.page-intro {
+    padding-block: clamp(3rem, 7vw, 6rem) 2.5rem;
+}
+/* Texto + imagen: una columna en celular, dos en pantallas grandes */
+.split {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.split > * {
+    flex: 1;
+    min-width: 0;
+}
+
+/* ---------- 3. Encabezado y menú ---------- */
+.site-header {
+    border-bottom: 1px solid #3e403b;
+}
+.header-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding-block: 1.4rem;
+}
+.brand {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.55rem;
+    color: #f5f0e8;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+}
+.brand-icon {
+    display: grid;
+    place-items: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 0.6rem;
+    background: #ffad61;
+    color: #22170e;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0;
+}
+.brand-subtitle {
+    flex-basis: 100%;
+    margin-left: 2rem;
+    color: #b9b7af;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav-list li + li {
+    margin-top: 0;
+}
+.nav-list a {
+    display: block;
+    padding: 0.65rem 0.85rem;
+    border-radius: 0.5rem;
+    color: #b9b7af;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+.nav-list a:hover {
+    background: #1b1d1c;
+    color: #f5f0e8;
+}
+.nav-list .activo {
+    background: #37271b;
+    color: #ffad61;
+}
+
+/* ---------- 4. Portada (hero) ---------- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    padding-block: clamp(3rem, 7vw, 6rem);
+    align-items: center;
+}
+.hero-copy,
+.hero > .img-slot {
+    flex: 1;
+    min-width: 0;
+    width: 100%;
+}
+.hero h1 span {
+    color: #ffad61;
+}
+
+/* ---------- 5. Botones y enlaces ---------- */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.button {
+    display: inline-flex;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0.85rem 1.3rem;
+    border-radius: 0.6rem;
+    background: #ffad61;
+    color: #22170e;
+    font-weight: 700;
+    text-decoration: none;
+}
+.button:hover {
+    background: #f5f0e8;
+    color: #22170e;
+}
+.text-link {
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ---------- 6. Tarjetas y galería ---------- */
+.card-list,
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+.card {
+    flex: 1 1 18rem;
+    min-width: 0;
+    padding: 1.5rem;
+    border: 1px solid #3e403b;
+    border-radius: 1.25rem;
+    background: #1b1d1c;
+}
+.card-number {
+    display: block;
+    font-size: 0.9rem;
+    color: #ffad61;
+    letter-spacing: 0.12rem;
+    margin-bottom: 1.5rem;
+}
+.card h2,
+.card h3 {
+    font-size: 1.2rem;
+}
+.card p {
+    margin-block: 1rem 1.5rem;
+}
+.icon {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+.history-list {
+    margin-bottom: 4rem;
+}
+.gallery {
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+.gallery .img-slot {
+    flex: 1 1 16rem;
+    min-width: 0;
+}
+
+/* ---------- 7. Componentes de contenido ---------- */
+/* Pasos numerados (vibe coding y fases de la IA) */
+.loop {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    counter-reset: paso;
+}
+.loop > div {
+    flex: 1 1 14rem;
+    min-width: 0;
+    padding: 1.25rem;
+    border: 1px solid #3e403b;
+    border-radius: 1rem;
+    background: #1b1d1c;
+    counter-increment: paso;
+}
+.loop > div::before {
+    content: counter(paso);
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.1rem 0.6rem;
+    border-radius: 0.4rem;
+    background: #37271b;
+    color: #ffad61;
+    font-weight: 700;
+}
+.loop h3 {
+    font-size: 1.1rem;
+}
+.loop p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Línea de tiempo (lista ordenada) */
+.timeline {
+    margin: 0;
+    padding: 0 0 0 1.5rem;
+    border-left: 2px solid #3e403b;
+    list-style: none;
+}
+.timeline li {
+    position: relative;
+    margin: 0;
+    padding: 0 0 1.5rem 1rem;
+}
+.timeline li::before {
+    content: "";
+    position: absolute;
+    top: 0.5rem;
+    left: calc(-1.5rem - 0.4rem - 1px);
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background: #ffad61;
+}
+.timeline time {
+    display: block;
+    color: #ffad61;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+.timeline h3 {
+    font-size: 1.15rem;
+}
+
+/* Avisos */
+.callout {
+    margin-top: 1.5rem;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid #3e403b;
+    border-left: 4px solid #7fb7a4;
+    border-radius: 0.75rem;
+    background: #1b1d1c;
+}
+.callout strong {
+    display: block;
+    margin-bottom: 0.3rem;
+}
+.callout.warn {
+    border-left-color: #ffad61;
+}
+.callout.danger {
+    border-left-color: #ff8a7a;
+}
+
+/* Tabla */
+.table-wrap {
+    overflow-x: auto;
+    border: 1px solid #3e403b;
+    border-radius: 1rem;
+    background: #1b1d1c;
+}
+table {
+    width: 100%;
+    min-width: 36rem;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid #3e403b;
+    text-align: left;
+    vertical-align: top;
+}
+thead th {
+    background: #242624;
+    color: #ffad61;
+    font-size: 0.75rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+tbody th {
+    color: #f5f0e8;
+}
+td {
+    color: #b9b7af;
+}
+tbody tr:last-child th,
+tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Bloque de código / ejemplo de prompt */
+.code-block {
+    margin: 0;
+    padding: 1.2rem 1.4rem;
+    border: 1px solid #3e403b;
+    border-radius: 1rem;
+    background: #0b0c0c;
+    color: #e8e2d6;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-x: auto;
+}
+
+/* Preguntas desplegables (details) de la página del autor */
+.faq-column {
+    flex: 1 1 22rem;
+    min-width: 0;
+}
+.faq-column h3 {
+    margin-bottom: 1rem;
+}
+.faq {
+    margin-bottom: 0.75rem;
+    border: 1px solid #3e403b;
+    border-radius: 0.75rem;
+    background: #1b1d1c;
+}
+.faq summary {
+    padding: 1rem 1.2rem;
+    color: #f5f0e8;
+    font-weight: 700;
+    cursor: pointer;
+}
+.faq[open] {
+    border-color: #ffad61;
+}
+.faq-body {
+    padding: 0 1.2rem 1rem;
+}
+
+/* ---------- 8. Imágenes ---------- */
+.img-slot img {
+    width: 100%;
+    max-height: 32rem;
+    aspect-ratio: var(--ratio, 16 / 9);
+    object-fit: cover;
+    border: 1px solid #3e403b;
+    border-radius: 1.25rem;
+}
+.img-slot figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: #b9b7af;
+}
+.img-slot.round {
+    max-width: 20rem;
+    margin-inline: auto;
+}
+.img-slot.round img {
+    border-radius: 50%;
+}
+
+/* Video (sin usar por ahora, listo para cuando se necesite) */
+.video-section {
+    max-width: 60rem;
+    margin-inline: auto;
+    padding-bottom: 4rem;
+}
+.video-section h2 {
+    margin-bottom: 1.5rem;
+}
+.video-iframe {
+    aspect-ratio: 16 / 9;
+    border: 1px solid #3e403b;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: #1b1d1b;
+}
+.video-iframe iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+.video-note {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ---------- 9. Pie de página ---------- */
+.site-footer {
+    margin-top: 2rem;
+    border-top: 1px solid #3e403b;
+    font-size: 0.8rem;
+}
+.footer-layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-block: 1.8rem;
+}
+.footer-layout p {
+    margin: 0;
+}
+
+/* ---------- Botón "Mostrar más" (lo controla js/script.js) ---------- */
+.boton-mas {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: #ffad61;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    cursor: pointer;
+}
+.boton-mas:hover {
+    color: #f5f0e8;
+}
+.boton-mas:focus-visible {
+    outline: 3px solid #ffad61;
+    outline-offset: 5px;
+}
+
+/* ---------- 10. Pantallas grandes ---------- */
+@media (min-width: 56rem) {
+    .split,
+    .hero {
+        flex-direction: row;
+        align-items: center;
+    }
+}
